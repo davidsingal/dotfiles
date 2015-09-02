@@ -3,6 +3,7 @@ filetype off
 
 " highlighting
 syntax on
+colorscheme smyck
 set background=dark
 set cursorline
 set number

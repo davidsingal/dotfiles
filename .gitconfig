@@ -109,7 +109,7 @@
   local = yellow
   remote = green
 
-  [color "diff"]
+[color "diff"]
 
   meta = yellow bold
   frag = magenta bold # line info
@@ -152,4 +152,4 @@
 
 [user]
   name = Your Name
-  email = username@domain.com
+  email = email@domain.com

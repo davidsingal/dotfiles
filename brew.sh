@@ -17,15 +17,17 @@ brew upgrade --all
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
-# brew install bash
-# brew tap homebrew/versions
-# brew install bash-completion2
+brew install bash
+brew tap homebrew/versions
+brew install bash-completion2
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
 
 # Install other useful binaries.
 brew install ack

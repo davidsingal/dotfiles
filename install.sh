@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir -p -f ~/.vim/backups
-mkdir -p -f ~/.vim/swaps
-mkdir -p -f ~/.vim/undo
-mkdir -p -f ~/.vim/colors
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/undo
 
 cd "$(dirname "${BASH_SOURCE}")";
 
@@ -12,6 +11,7 @@ git pull origin master;
 function doIt() {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
     --exclude "brew.sh" \
+    --exclude "Smyck.terminal" \
     --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
   source ~/.bash_profile;
 }

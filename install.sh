@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+mkdir -p -f ~/.vim/backups
+mkdir -p -f ~/.vim/swaps
+mkdir -p -f ~/.vim/undo
+mkdir -p -f ~/.vim/colors
+
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;

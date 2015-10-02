@@ -1,20 +1,37 @@
-set nocompatible
-filetype off
-
-" highlighting
-syntax on
-colorscheme smyck
+" Use theme
 set background=dark
-set cursorline
+colorscheme smyck
+
+" Make Vim more useful
+set nocompatible
+
+" Use UTF-8 without bomb
+set encoding=utf-8 nobomb
+
+" Enable line numbers
 set number
 
-" tabbing
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+" Highlight current line
+set cursorline
 
-" folding settings
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1
+" Make tabs as wide as two spaces
+set tabstop=2
+
+" Highlight search
+set hlsearch
+
+" Ignore case of searches
+set ignorecase
+
+" Enable mouse in all modes
+set mouse=a
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
+
+" Don't create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*

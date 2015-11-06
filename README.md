@@ -4,7 +4,11 @@ My own dotfiles based on [Mathias’s dotfiles](https://github.com/mathiasbynens
 
 ## Installation
 
-First, we need [Homebrew](http://brew.sh).
+First, install the Command Line Tools:
+
+    xcode-select --install
+
+and [Homebrew](http://brew.sh).
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -16,15 +20,11 @@ Then we can install brew dependencies:
 
 You can clone the repository wherever you want. (I like to keep it in ~/Projects/dotfiles, with ~/dotfiles as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
-    git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source install.sh
+    git clone https://github.com/davidsingal/dotfiles.git && cd dotfiles && source install.sh
 
 To update, cd into your local dotfiles repository and then:
 
     source install.sh
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-    set -- -f; source bootstrap.sh
 
 ## Contributing
 

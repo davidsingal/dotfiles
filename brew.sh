@@ -41,7 +41,6 @@ brew install heroku-toolbelt
 brew install rbenv
 brew install ruby-build
 brew install postgresql
-brew install mongodb
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -16,6 +16,14 @@ Then we can install brew dependencies:
 
     ./brew.sh
 
+Add the new shell to the list of legit shells:
+
+    sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+
+Change the shell for the user
+
+    chsh -s /usr/local/bin/bash
+
 ## Usage
 
 You can clone the repository wherever you want. (I like to keep it in ~/Projects/dotfiles, with ~/dotfiles as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
@@ -57,4 +65,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

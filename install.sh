@@ -27,3 +27,6 @@ else
 fi;
 
 unset doIt;
+
+vim +PluginInstall +qall
+

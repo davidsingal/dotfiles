@@ -82,9 +82,6 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 
-" NeerdTREE Tabs configuration
-let g:nerdtree_tabs_open_on_console_startup=1
-
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on

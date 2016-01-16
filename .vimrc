@@ -78,11 +78,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Vundle plugins
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/nerdtree.git'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
-

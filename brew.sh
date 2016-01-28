@@ -39,6 +39,7 @@ brew install imagemagick --with-webp
 brew install node
 brew install heroku-toolbelt
 brew install rbenv
+brew install rbenv-gemset
 brew install ruby-build
 brew install mongodb
 brew install postgresql

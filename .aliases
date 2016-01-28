@@ -21,3 +21,6 @@ alias pgserver="postgres -D /usr/local/var/postgres"
 
 # Sublime text command line
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Create gemsets
+echo '.gems' > .rbenv-gemsets

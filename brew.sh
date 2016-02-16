@@ -47,6 +47,6 @@ brew install postgresql
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# Some additional configurations
+# Configuring mongodb
 sudo mkdir -p /data/db
 sudo chown -R $USER /data/db

@@ -1,6 +1,5 @@
 " Use theme
 set background=dark
-" colorscheme smyck
 
 " Make Vim more useful
 set nocompatible
@@ -69,19 +68,3 @@ endif
 
 " Don't create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Vundle plugins
-" Plugin 'scrooloose/nerdtree.git'
-" Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'scrooloose/syntastic'
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on

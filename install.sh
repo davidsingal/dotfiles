@@ -9,10 +9,13 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
+  rsync --exclude ".git/" \
+    --exclude ".DS_Store" \
+    --exclude "install.sh" \
     --exclude "brew.sh" \
-    --exclude "Smyck.terminal" \
-    --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+    --exclude "terminal-themes" \
+    --exclude "README.md" \
+    --exclude "LICENSE" -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 
@@ -27,6 +30,3 @@ else
 fi;
 
 unset doIt;
-
-vim +PluginInstall +qall
-

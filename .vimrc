@@ -56,9 +56,6 @@ set ignorecase
 " Enable mouse in all modes
 set mouse=a
 
-" Wrap gitcommit file types at the appropriate length
-filetype off
-
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps

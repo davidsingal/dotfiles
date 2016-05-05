@@ -14,12 +14,17 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# Install GNU core utilities (those that come with OS X are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
-# brew install bash
-# brew tap homebrew/versions
-# brew install bash-completion2
+brew install bash
+brew tap homebrew/versions
+brew install bash-completion2
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -50,13 +55,12 @@ brew cleanup
 
 # Cask
 brew cask
-brew cask install 'telegram'
 brew cask install 'google-chrome'
+brew cask install 'firefox'
 brew cask install 'virtualbox'
 brew cask install 'vagrant'
-brew cask install 'slack'
-brew cask install 'atom'
-
-# Configuring mongodb
-sudo mkdir -p /data/db
-sudo chown -R $USER /data/db
+brew cask install 'flux'
+brew cask install 'skype'
+brew cask install 'zeplin'
+brew cask install 'spectacle'
+brew cask install 'tower'

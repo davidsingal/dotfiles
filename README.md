@@ -1,6 +1,6 @@
 # David Inga's dotfiles
 
-TODO: write a description
+I maintain this repo as my dotfiles.
 
 ## Installation
 

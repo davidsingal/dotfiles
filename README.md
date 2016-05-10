@@ -20,7 +20,7 @@ We are using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 
 ## Usage
 
-You can clone the repository wherever you want. (I like to keep it in ~/Projects/dotfiles, with ~/dotfiles as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
     git clone https://github.com/davidsingal/dotfiles.git && cd dotfiles && source install.sh
 
@@ -30,16 +30,15 @@ To update, cd into your local dotfiles repository and then:
 
 ### Add files
 
-Add this to `.zshrc`:
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-26)) takes place.
+
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
 
 ```bash
-# Load the shell dotfiles, and then some:
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{exports,aliases,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+export PATH="/usr/local/bin:$PATH"
 ```
+
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
 My `~/.extra` looks something like this:
 

@@ -52,15 +52,3 @@ brew install postgresql
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-# Cask
-brew cask
-brew cask install 'google-chrome'
-brew cask install 'firefox'
-brew cask install 'virtualbox'
-brew cask install 'vagrant'
-brew cask install 'flux'
-brew cask install 'skype'
-brew cask install 'zeplin'
-brew cask install 'spectacle'
-brew cask install 'tower'

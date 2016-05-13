@@ -43,7 +43,7 @@ brew install carthage
 
 # Install libraries for web development
 brew install node
-brew install heroku-toolbelt
+brew install heroku
 brew install rbenv
 brew install rbenv-gemset
 brew install ruby-build

@@ -16,7 +16,8 @@ alias ls="gls -AFh ${colorflag} --group-directories-first"
 alias lsd='ls -l | grep "^d"'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="sudo softwareupdate -i -a; brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor;"
+alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade --all; brew cleanup; brew prune; npm install npm -g; npm update -g; gem update --system; gem update'
+
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -32,3 +33,6 @@ alias pgserver="postgres -D /usr/local/var/postgres"
 
 # Create gemsets
 alias gemset="echo '.gems' > .rbenv-gemsets"
+
+# Sublime Text
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

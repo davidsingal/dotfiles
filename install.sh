@@ -13,6 +13,7 @@ function doIt() {
     --exclude ".DS_Store" \
     --exclude "install.sh" \
     --exclude "brew.sh" \
+    --exclude "remove_brew.sh" \
     --exclude "terminal-themes" \
     --exclude "README.md" \
     --exclude "config.sh" \

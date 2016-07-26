@@ -18,7 +18,6 @@ alias lsd='ls -l | grep "^d"'
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade --all; brew cleanup; brew prune; npm install npm -g; npm update -g; gem update --system; gem update'
 
-
 # File size
 alias fs="stat -f \"%z bytes\""
 

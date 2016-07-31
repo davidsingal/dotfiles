@@ -30,7 +30,7 @@ brew install bash-completion2
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 
@@ -46,7 +46,6 @@ brew install node
 brew install heroku
 brew install rbenv
 brew install rbenv-gemset
-brew install ruby-build
 brew install mongodb
 brew install postgresql
 

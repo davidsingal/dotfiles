@@ -15,6 +15,7 @@ function doIt() {
     --exclude "brew.sh" \
     --exclude "remove_brew.sh" \
     --exclude "terminal-themes" \
+    --exclude "sublime" \
     --exclude "README.md" \
     --exclude "config.sh" \
     --exclude "LICENSE" -avh --no-perms . ~;

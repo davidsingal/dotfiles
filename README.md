@@ -2,21 +2,23 @@
 
 I maintain this repo as my dotfiles.
 
+
 ## Installation
 
 First, install the Command Line Tools:
 
-    xcode-select --install
+```bash
+xcode-select --install
+```
 
 and [Homebrew](http://brew.sh).
 
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Then we can install brew dependencies:
 
     ./brew.sh
 
-We are using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 
 ## Usage
 

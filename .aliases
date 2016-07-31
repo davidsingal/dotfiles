@@ -1,6 +1,6 @@
 # mv, rm, cp
 alias mv="mv -v"
-alias rm="rm -i -v"
+alias rm="rm -v"
 alias cp="cp -v"
 
 # use coreutils `ls` if possible…
@@ -12,11 +12,9 @@ export CLICOLOR_FORCE=1
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
 alias ls="gls -AFh ${colorflag} --group-directories-first"
-# only directories
-alias lsd='ls -l | grep "^d"'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade --all; brew cleanup; brew prune; npm install npm -g; npm update -g; gem update --system; gem update'
+alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade --all; brew cleanup; brew prune'
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -30,8 +28,14 @@ alias server="python -m SimpleHTTPServer 8000"
 # Postgreslsql
 alias pgserver="postgres -D /usr/local/var/postgres"
 
-# Create gemsets
-alias gemset="echo '.gems' > .rbenv-gemsets"
+# Rbenv gemset https://github.com/jf/rbenv-gemset
+alias gemset="rbenv gemset"
 
 # Sublime Text
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"

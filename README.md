@@ -13,22 +13,30 @@ xcode-select --install
 
 and [Homebrew](http://brew.sh).
 
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 Then we can install brew dependencies:
 
-    ./brew.sh
+```bash
+./brew.sh
+```
 
 
 ## Usage
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
-    git clone https://github.com/davidsingal/dotfiles.git && cd dotfiles && source install.sh
+```bash
+git clone https://github.com/davidsingal/dotfiles.git && cd dotfiles && source install.sh
+```
 
 To update, cd into your local dotfiles repository and then:
 
-    source install.sh
+```bash
+source install.sh
+```
 
 ### Add files
 

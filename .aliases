@@ -14,7 +14,7 @@ export CLICOLOR_FORCE=1
 alias ls="gls -AFh ${colorflag} --group-directories-first"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade --all; brew cleanup; brew prune'
+alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade; brew cleanup; brew prune'
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -36,6 +36,13 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# Docker aliases
+alias dockerrmall='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
+alias dockerclean='docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")'
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"

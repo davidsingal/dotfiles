@@ -14,7 +14,6 @@ function doIt() {
     --exclude "install.sh" \
     --exclude "brew.sh" \
     --exclude "remove_brew.sh" \
-    --exclude "terminal-themes" \
     --exclude "sublime" \
     --exclude "README.md" \
     --exclude "config.sh" \

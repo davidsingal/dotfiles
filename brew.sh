@@ -42,9 +42,9 @@ brew install homebrew/dupes/openssh
 
 # Install other useful binaries.
 brew install git
-
-# Install libraries for web development
-brew install heroku
+brew install node
+brew install rbenv
+brew install ruby-build
 
 # Remove outdated versions from the cellar.
 brew cleanup

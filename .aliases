@@ -1,6 +1,5 @@
 # mv, rm, cp
 alias mv="mv -v"
-alias rm="rm -v"
 alias cp="cp -v"
 
 # use coreutils `ls` if possible…
@@ -13,6 +12,10 @@ export CLICOLOR_FORCE=1
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
 alias ls="gls -AFh ${colorflag} --group-directories-first"
 
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade; brew cleanup; brew prune'
 
@@ -22,17 +25,23 @@ alias fs="stat -f \"%z bytes\""
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
 # Python server
 alias server="python -m SimpleHTTPServer 8000"
 
 # Postgreslsql
-alias pgserver="postgres -D /usr/local/var/postgres"
-
-# Rbenv gemset https://github.com/jf/rbenv-gemset
-alias gemset="rbenv gemset"
+alias pgserver="pg_ctl -D /usr/local/var/postgres"
 
 # Sublime Text
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -40,9 +49,5 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Docker aliases
-alias dockerreset='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
-alias dockerclean='docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")'
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

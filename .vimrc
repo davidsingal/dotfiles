@@ -36,6 +36,9 @@ syntax on
 set cursorline
 
 " Make tabs as wide as two spaces
+set expandtab
+set smarttab
+set shiftwidth=2
 set tabstop=2
 
 " Show the cursor position

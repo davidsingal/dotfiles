@@ -17,7 +17,7 @@ alias ls="gls -AFh ${colorflag} --group-directories-first"
 alias grep='grep --color=auto'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade; brew cleanup; brew prune'
+alias update='sudo softwareupdate -i -a; brew -v update; brew upgrade; brew cleanup; brew prune; npm install npm -g; npm update -g'
 
 # File size
 alias fs="stat -f \"%z bytes\""

@@ -43,7 +43,6 @@ brew install openssh
 # Install other useful binaries.
 brew install ack
 brew install git
-brew install git-fetch
 brew install node
 brew install nvm
 brew install rbenv

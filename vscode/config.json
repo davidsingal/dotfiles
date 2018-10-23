@@ -1,0 +1,13 @@
+{
+  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "prettier.singleQuote": true,
+  "terminal.integrated.shell.osx": "/usr/local/bin/bash",
+  "workbench.startupEditor": "newUntitledFile"
+}

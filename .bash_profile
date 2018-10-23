@@ -42,3 +42,9 @@ fi;
 
 # rbenv
 eval "$(rbenv init -)"
+
+# NVM
+export export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+[[ -f ".nvmrc" ]] && nvm use node
+

@@ -43,11 +43,11 @@ brew install openssh
 # Install other useful binaries.
 brew install ack
 brew install git
-brew install node
 brew install nvm
 brew install rbenv
 brew install imagemagick --with-webp
 brew install postgresql
+brew install yarn --without-node
 
 # Remove outdated versions from the cellar.
 brew cleanup

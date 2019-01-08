@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-mkdir -p ~/.vim/backups
-mkdir -p ~/.vim/swaps
-mkdir -p ~/.vim/undo
-
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
@@ -16,8 +12,8 @@ function doIt() {
     --exclude "remove_brew.sh" \
     --exclude "sublime" \
     --exclude "README.md" \
-    --exclude "config.sh" \
-    --exclude "LICENSE" -avh --no-perms . ~;
+    --exclude "LICENSE" \
+    -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 

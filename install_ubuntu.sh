@@ -20,7 +20,6 @@ function doIt() {
     --exclude "LICENSE" \
     --exclude ".bash_profile" \
     --exclude ".aliases" \
-    --exclude ".exports" \
     --exclude "ubuntu" \
     -avh --no-perms . ~;
 

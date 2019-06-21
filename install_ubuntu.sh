@@ -5,6 +5,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
+  rsync -avh --no-perms ./ubuntu/ ~;
+
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
     --exclude "install.sh" \
@@ -16,7 +18,12 @@ function doIt() {
     --exclude "vscode" \
     --exclude "README.md" \
     --exclude "LICENSE" \
+    --exclude ".bash_profile" \
+    --exclude ".aliases" \
+    --exclude ".exports" \
+    --exclude "ubuntu" \
     -avh --no-perms . ~;
+
   source ~/.bash_profile;
 }
 
